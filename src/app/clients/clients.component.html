@@ -1,0 +1,9 @@
+<h1>Clients</h1>
+
+<ul [@listStagger]="clients$">
+  <li *ngFor="let client of clients$">
+    <ul>
+      <li>{{client.name}}</li>
+    </ul>
+  </li>
+</ul>
