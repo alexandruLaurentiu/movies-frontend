@@ -1,3 +1,32 @@
-<p>
-  movie-details works!
-</p>
+<h1>{{movie$.name}} details</h1>
+
+<ul>
+  <li>
+    <strong>Genre: </strong>{{movie$.gen}}</li>
+  <li>
+    <strong>Apparition year: </strong>{{movie$.apparitionYear}}</li>
+  <li>
+    <strong>IMDB note: </strong>{{movie$.note}}</li>
+  <ul>
+    <h3>Principal actors:</h3>
+    <li *ngFor="let actor of movie$.principals">
+      <ul>
+        <li>
+          <strong>Actor name: </strong> {{actor.name}}</li>
+        <li>
+          <strong>Role: </strong> {{actor.role}}</li>
+      </ul>
+    </li>
+  </ul>
+  <ul>
+    <h3>Secondar actors:</h3>
+    <li *ngFor="let actor of movie$.secondars">
+      <ul>
+        <li>
+          <strong>Actor name: </strong> {{actor.name}}</li>
+        <li>
+          <strong>Role: </strong> {{actor.role}}</li>
+      </ul>
+    </li>
+  </ul>
+</ul>

@@ -3,7 +3,9 @@
 <ul [@listStagger]="clients$">
   <li *ngFor="let client of clients$">
     <ul>
-      <li>{{client.name}}</li>
+      <a routerLink="clientDetails/{{client.id}}">{{client.name}} {{client.lastName}}</a>
+
+      <li><strong>Age: </strong>{{client.age}}</li>
     </ul>
   </li>
 </ul>
